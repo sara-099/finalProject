@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-115 Final Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="projectJS.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="Fitness World-logo-white.png" alt="logo">
+        <h1>Build your Meal Plan</h1>
+        <p>Sara Mallick</p>
+        <p>WEB115.0002</p>
+    </header>
+
+    <form>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" placeholder="Full Name" id="name">
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" placeholder="Email Id" id="email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" placeholder="(xxx)-xxx-xxxx">
+        </div>
+
+        <div>
+            <label for="weekGoal">Goal of the week: </label>
+            <input type="text" id="weekGoal" placeholder="Goal of the Week">
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!--Breakfast Row-->
+                    <tr>
+                        <td class="row-heading">Breakfast</td>
+                        <td>
+                            <input type="text" id="breakfast-mon">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-tue">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-wed">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-thurs">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-fri">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-sat">
+                        </td>
+                        <td>
+                            <input type="text" id="breakfast-sun">
+                        </td>
+                    </tr>
+
+                    <!--Snack Row-->
+                    <tr>
+                        <td class="row-heading">Snack</td>
+                        <td>
+                            <input type="text" id="snack-mon">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-tue">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-wed">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-thurs">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-fri">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-sat">
+                        </td>
+                        <td>
+                            <input type="text" id="snack-sun">
+                        </td>
+                    </tr>
+
+                    <!--Lunch Row-->
+                    <tr>
+                        <td class="row-heading">Lunch</td>
+                        <td>
+                            <input type="text" id="lunch-mon">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-tue">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-wed">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-thurs">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-fri">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-sat">
+                        </td>
+                        <td>
+                            <input type="text" id="lunch-sun">
+                        </td>
+                    </tr>
+
+                    <!--Dinner Row-->
+                    <tr>
+                        <td class="row-heading">Dinner</td>
+                        <td>
+                            <input type="text" id="dinner-mon">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-tue">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-wed">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-thurs">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-fri">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-sat">
+                        </td>
+                        <td>
+                            <input type="text" id="dinner-sun">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" id="submitBtn">Create Meal Planner</button>
+        </div>
+    </form>
+</body>
+
+</html>

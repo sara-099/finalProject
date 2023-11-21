@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    /* Dark background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+img {
+    max-width: 100px;
+    /* Adjust the maximum width of the logo */
+    height: auto;
+    /* Maintain aspect ratio for the logo */
+}
+
+h1 {
+    margin: 10px 0 0;
+    /* Adjust top margin of the heading */
+    font-size: 28px;
+    /* Increase font size for the heading */
+}
+
+p {
+    margin: 5px 0;
+    /* Adjust top and bottom margins of paragraphs */
+    font-size: 14px;
+    /* Set font size for paragraphs */
+}
+
+form {
+    max-width: 800px;
+    /* Set a maximum width for the form */
+    margin: 20px auto;
+    /* Center the form on the page */
+}
+
+div {
+    margin-bottom: 15px;
+    /* Add some space between form elements */
+}
+
+label {
+    display: block;
+    /* Make labels block elements for better spacing */
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    /* Make input fields take up full width of the container */
+    padding: 8px;
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+}
+
+table {
+    width: 100%;
+    /* Make the table take up full width of the container */
+    border-collapse: collapse;
+    /* Collapse table borders */
+    margin-bottom: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* Add borders to table cells */
+    padding: 8px;
+    text-align: center;
+}
+
+.row-heading {
+    font-weight: bold;
+    /* Make row headings bold */
+}
+
+button {
+    background-color: #4CAF50;
+    /* Green background color for the button */
+    color: white;
+    /* White text color */
+    padding: 10px 15px;
+    /* Add padding to the button */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Add a pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Darker green background color on hover */
+}

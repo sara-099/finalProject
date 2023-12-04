@@ -27,3 +27,12 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #e0e0e0;
 }
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

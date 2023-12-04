@@ -1,15 +1,18 @@
 // Getting the submit btn 
 const submitBtn = document.getElementById('submitBtn');
+const emailRegx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+
 
 function newWindow() {
-    const visitor = document.getElementById('name');
     // Gnerating html text
-    htmlText = `<html>
+    const htmlText = `<html>
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> \
         <title>Meal Plan</title>
         <link href="mealPlan.css" rel="stylesheet">
+        <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     </head>
     <body>
         <table>
@@ -66,6 +69,50 @@ function newWindow() {
                 </tr>
             </tbody>
         </table>
+        <div>
+            <button id="printMealPlanBtn">Print Meal Plan</button>
+            <button id="downloadMealPlanBtn">Download Meal Plan</button>
+            <button id="clearMealPlanBtn">Clear Meal Plan</button>
+        </div>
+
+        <script>
+        function printMealPlan() {
+            window.print();
+        }
+
+        function downloadMealPlan() {
+            // Select the element containing your meal plan content
+            const mealPlanElement = document.body;
+
+            // Use html2pdf to generate a PDF
+            html2pdf(mealPlanElement, {
+                margin: 10,
+                filename: 'meal_plan.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                onbeforestart: () => {
+                    // Optionally, you can add some styling before the PDF is generated
+                    mealPlanElement.style.fontSize = '12px';
+                },
+                onafterrender: () => {
+                    // Optionally, you can revert the styling changes after the PDF is generated
+                    mealPlanElement.style.fontSize = '';
+                }
+            });
+        }
+
+        function clearMealPlan() {
+            const tds = document.querySelectorAll('tbody td:not(:first-child)')
+            tds.forEach(td => {
+                td.textContent = ""
+            })
+        }
+
+        document.getElementById('printMealPlanBtn').addEventListener('click', printMealPlan);
+        document.getElementById('downloadMealPlanBtn').addEventListener('click', downloadMealPlan);
+        document.getElementById('clearMealPlanBtn').addEventListener('click', clearMealPlan);
+        </script>
     </body> 
     </html>`;
 
@@ -74,5 +121,8 @@ function newWindow() {
     flyWindow.document.write(htmlText);
 }
 
-
-submitBtn.addEventListener('click', newWindow);
+submitBtn.addEventListener('click', function () {
+    if (emailRegx.test(document.getElementById('email').value)) {
+        newWindow();
+    }
+});
